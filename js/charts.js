@@ -67,11 +67,6 @@ function buildCharts(sample) {
 
     //  5. Create a variable that holds the first sample in the array.
     var result = resultArray[0];
-    var PANEL = d3.select("#sample-metadata");
-
-    PANEL.html("");
-    PANEL.append("h6").text('Id: ' + result.id);
-    PANEL.append("h6").text('OTU Labels: ' + result.otu_labels);
     
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
 
@@ -115,9 +110,6 @@ function buildCharts(sample) {
       type: "bar",
       orientation: "h",
       text: sortedOTUs 
-
-
-
      }];
     // 9. Create the layout for the bar chart. 
   
@@ -179,7 +171,7 @@ function buildCharts(sample) {
       mode: "gauge+number",
       title: {text: "<b> Belly Button Washing Frequency </b> <br></br> Scrubs Per Week"},
       gauge: {
-        axis: {range: [null,10], dtick: "2"},
+        axis: {range: [null,10], dtick: "1"},
 
         bar: {color: "black"},
         steps:[
@@ -189,7 +181,7 @@ function buildCharts(sample) {
           {range: [6, 8], color: "lightgreen"},
           {range: [8, 10], color: "green"}
         ],
-        dtick: 2
+        dtick: 1
       }
     }];
     
