@@ -1,0 +1,22 @@
+body {
+
+    color: #000000;
+    background-color: rgb(198, 255, 188);
+  }
+ 
+ .tag {
+     font-family: inherit; 
+     font-size: 1rem;
+    }  
+
+.jumbotron {
+    background-image: url("http://cdn.sci-news.com/images/2017/08/image_5170-Viruses.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+
+  }
+
+.header-txt {
+    background-color: rgb(198, 255, 188);
+    opacity: 0.9;
+    }

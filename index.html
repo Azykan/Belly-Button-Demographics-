@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
+    <title>Belly Button Biodiversity - Basic Charts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel ="stylesheet" href="style.css">
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
 </head>
 <body>
-    <div id="plot"></div>
-    <script src="data.js"></script>
-    <script src="plots.js"></script>
+    <div class="container">
+
+
+        
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <div class="header-txt">
+                <h1 class="display-4">Belly Button Biodiversity</h1>
+                <h1></h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+                <h4>This interactive page is a data analysis of belly button samples, which includes belly button types, bacteria types, and washing frequeny. Select a sample from the dropdown to see the individual results for each patient.</h4>
+            </div>
+        </div>
+        </div>
+    <h5>Test Subject ID No.:</h5>
+
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="well">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Demographic Info</h3>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+  
+  
+    <div id="sample-metadata" class="panel-body"></div>
+        <div id="plotArea"></div>
+        <div id="bubble-chart"></div>
+        <div id="gauge-chart"></div>
+        
+        <script src="js/plots.js"></script>
+        <script src="js/charts.js"></script>
+    </div>
 </body>
 </html>
